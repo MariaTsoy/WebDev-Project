@@ -1,7 +1,7 @@
 # WebDev-Project
 End-term project for web development
 
-Eleubekova Aruzhan
+Yeleubekova Aruzhan
 Tsoy Mariya
 
 In this project we will prepare Pinterest-like online application. This application will have following main functionalities:
