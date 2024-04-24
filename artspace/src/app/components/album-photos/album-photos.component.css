@@ -1,0 +1,94 @@
+.all-photos{
+  margin: 0;
+  padding: 0;
+  width: 90vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 236px);
+  grid-auto-rows: 10px;
+  justify-content: center;
+}
+.newPhoto{
+  border: 2px black solid;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 15px 10px;
+  grid-row-end: span 26;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.photos{
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 15px 10px;
+  grid-row-end: span 26;
+}
+.photos img{
+  flex-shrink: 0;
+  min-width: 50%;
+  min-height: 50%
+}
+.photos:hover{
+  opacity: 0.9;
+  transform: scale(0.8);
+}
+.photo{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modal-bg{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal{
+  margin: 200px auto auto 380px;
+  background-color: white;
+  width: 60%;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  border-radius: 12px;
+  padding: 20px;
+}
+.modal img{
+  align-self: center;
+  width: 50%;
+  height: 90%;
+  border-radius: 8px;
+}
+.modal p{
+  width: 40%;
+  padding-left: 30px;
+  padding-top: 50px;
+  font-size: 20px;
+  font-family: monospace;
+}
+.close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  opacity: 0.3;
+  font-size: 32px;
+}
+.close:hover {
+  opacity: 1;
+}

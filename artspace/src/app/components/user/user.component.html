@@ -1,0 +1,49 @@
+<div class="userMain" *ngIf="user">
+  <img
+    class="banner"
+    *ngIf="user.banner; else noBanner"
+    src="{{ user.banner }}"
+    alt="banner"
+  />
+  <ng-template #noBanner>
+    <img class="banner nobanner" />
+  </ng-template>
+  <div class="profile">
+    <div class="userInfo">
+      <div class="photoandFollows">
+        <img
+          class="pfp"
+          *ngIf="user.photo; else noPhoto"
+          src="{{ user.photo }}"
+          alt="{{ user.username }}"
+        />
+        <ng-template #noPhoto>
+          <img
+            class="pfp"
+            src="https://yt3.ggpht.com/ytc/AAUvwniOmzeSbOblg-nQOLNXwi2YuKSCBh34Ytj_ZPWYnQ=s900-c-k-c0x00ffffff-no-rj"
+            alt="{{ user.username }}"
+          />
+        </ng-template>
+        <div class="userFollowers">
+          <p class="followers"><strong>0</strong> Following</p>
+          <a><button class="follow">Follow</button></a>
+        </div>
+      </div>
+      <div class="nameandID">
+        <h2>{{ user.username }}</h2>
+        <span class="userID">#{{ user.id }}</span>
+        <p class="userEmail" *ngIf="user.email">{{ user.email }}</p>
+        <p class="userDesc" *ngIf="user.desc">{{ user.desc }}</p>
+      </div>
+    </div>
+    <div class="sublinks">
+      <a routerLink="/{{ user.id }}">Main</a>
+      <a routerLink="/{{ user.id }}/follows">Follows</a>
+      <a routerLink="/{{ user.id }}/albums">Gallery</a>
+      <a routerLink="/{{ user.id }}/settings">Settings</a>
+    </div>
+  </div>
+  <div class="subcontent">
+    <router-outlet></router-outlet>
+  </div>
+</div>

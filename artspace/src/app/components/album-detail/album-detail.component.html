@@ -1,0 +1,16 @@
+<p *ngIf="!loaded">Loading...</p>
+<div class="album">
+  <h2 class="album-id">Details for album #{{album.id}}</h2>
+  <div *ngIf="loaded" class="album-detail">
+    <div class="adding-title">
+      <input type="text" [(ngModel)]="album.title">
+      <button (click)="updateAlbum()" class="save-button">Save</button>
+    </div>
+  </div>
+
+  <p *ngIf="!loaded" class="loading">Loading album...</p><br>
+  <div class="buttons">
+    <button (click)="deleteAlbum()" class="delete-album-button">Delete Album</button>
+    <button (click)="goBack()" class="back-button">Go Back</button>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+.album {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(235, 235, 235);
+  padding: 2em 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 0.2px solid rgba(0,0,0,0.1);
+}
+
+h2, button {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.adding-title {
+  display: flex;
+  border-style: none;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+input {
+  padding: .375rem .75rem;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: .25rem;
+  margin-right: 10px;
+}
+
+.album-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.save-button, .back-button {
+  background-color: inherit;
+  padding: 9px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.save-button:hover, .back-button:hover {
+  background-color: rgba(41, 187, 137, 0.6);
+}
+
+.delete-album-button {
+  background-color: inherit;
+  padding: 9px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgb(230, 0, 35);
+  transition: all 0.3s ease 0s;
+}
+
+.delete-album-button:hover {
+  background-color: rgba(230, 0, 35, 0.8);
+}
+
+
+

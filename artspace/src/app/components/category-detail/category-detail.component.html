@@ -1,0 +1,48 @@
+<div class="pin_container small">
+  <div
+    class="card {{ photo.size }}"
+    *ngFor="let photo of photos; let index = index"
+  >
+    <div class="pin_title"></div>
+
+    <div class="pin_modal">
+      <div class="modal_head">
+        <div class="save_card">Save</div>
+      </div>
+
+      <div class="modal_foot">
+        <div class="destination">
+          <div class="pin_mock_icon_container">
+            <img
+              class="pin_mock_icon"
+              src="https://cdn.iconscout.com/icon/free/png-512/upper-right-arrow-1438213-1216174.png"
+              alt=""
+            />
+          </div>
+
+          <span>Eatery</span>
+        </div>
+
+        <div class="pin_mock_icon_container">
+          <img
+            class="pin_mock_icon"
+            src="https://icons-for-free.com/iconfiles/png/512/box+document+outline+share+top+upload+icon-1320195323221671611.png"
+            alt=""
+          />
+        </div>
+
+        <div class="pin_mock_icon_container">
+          <img
+            class="pin_mock_icon"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Simple_icon_ellipsis.svg/1280px-Simple_icon_ellipsis.svg.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="pin_image">
+      <img src="{{ photo.photo }}" alt="pin_image" />
+    </div>
+  </div>
+</div>

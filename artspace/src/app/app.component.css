@@ -1,0 +1,105 @@
+header {
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+}
+
+* {
+    background-color: inherit;
+}
+
+.logo {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.logo:hover {
+    color: rgba(41, 187, 137, 1);
+}
+
+li, a, button{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    background-color: rgb(235, 235, 235);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: rgb(235, 235, 235);
+    z-index: 100;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a {
+    transition: all 0.1s ease 0s;
+}
+
+.nav-links li a:hover {
+    border: 1px solid #333;
+    padding: 7px 10px;
+    color: rgba(41, 187, 137, 1);
+    border-radius: 10px;
+}
+
+.signup, .submit, .profilebutton {
+    padding: 9px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.signin, .closebutton, .logout {
+    padding: 9px 20px;
+    background-color: rgb(230, 0, 35);
+    border: none;
+    color: rgb(235, 235, 235);
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 5px;
+}
+
+.signup:hover, .submit:hover, .profilebutton:hover {
+    background-color: rgba(41, 187, 137, 0.6);
+}
+
+.signin:hover, .closebutton:hover, .logout:hover {
+    background-color: rgba(255, 0, 35, 0.8);
+}
+
+.modal {
+    background-color: rgba(255,255,255, 0.5);
+}
+
+.modal-dialog {
+    background-color: white;
+}
+
+.content {
+    margin-top:67px;
+}

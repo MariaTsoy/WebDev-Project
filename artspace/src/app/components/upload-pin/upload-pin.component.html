@@ -1,0 +1,102 @@
+
+<button (click)="isUploadWindowOpened=true">Add</button>
+
+<div class="pin_container small">
+<div class="card {{ pin.size }}" *ngFor='let pin of myPins; let index = index'>
+    <div class="pin_title"></div>
+    
+    <div class="pin_modal">
+        <div class="modal_head">
+            <div class="save_card">Save</div>
+        </div>
+
+        <div class="modal_foot">
+            <div class="destination">
+
+                <div class="pin_mock_icon_container">
+                    <img class="pin_mock_icon" src="https://cdn.iconscout.com/icon/free/png-512/upper-right-arrow-1438213-1216174.png" alt="">
+                </div>
+
+                <span>Eatery</span>
+            </div>
+
+            <div class="pin_mock_icon_container">
+                <img class="pin_mock_icon" src="https://icons-for-free.com/iconfiles/png/512/box+document+outline+share+top+upload+icon-1320195323221671611.png" alt="">
+            </div>
+
+            <div class="pin_mock_icon_container">
+                <img class="pin_mock_icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Simple_icon_ellipsis.svg/1280px-Simple_icon_ellipsis.svg.png" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pin_image">
+        <img src="{{pin.photo}}" alt="pin_image">
+    </div>
+    
+</div>
+</div>
+
+
+
+<div *ngIf="isUploadWindowOpened" class="add_pin_modal">
+    <div class="add_pin_container">
+
+        <div class="side" id="left_side">
+            <div class="section1">
+                <div (click)="isUploadWindowOpened=false" class="pin_mock_icon_container">
+                    <img class="pin_mock_icon" src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/close.png" alt="close">
+                </div>
+            </div>
+    
+            <div class="section2">
+                <label *ngIf="!selectedFile" for="upload_img" id="upload_img_label">
+                    <div class="upload_img_container">
+                        <div id="dotted_border">
+                            <div class="pin_mock_icon_container">
+                                <img class="pin_mock_icon" src="https://icons-for-free.com/iconfiles/png/512/box+document+outline+share+top+upload+icon-1320195323221671611.png" alt="upload">
+                            </div>
+                            <div>Click to upload</div>
+                            <div>Recommendation: <br> Use high-quality .jpeg files less than 20MB</div>
+                        </div>
+                    </div>
+                    <input (change)="onFileSelected($event)" type="file" name="upload_img" id="upload_img">
+                </label>
+
+                <div *ngIf="selectedFile" class="modals_pin">
+                    <div class="pin_image" (click)="selectedFile = null">
+                        <img src="{{selectedFile}}" alt="pin_image">
+                    </div>
+                </div>
+            </div>
+    
+            <div *ngIf="selectedFile" class="section3">
+                <div class="reset" (click)="selectedFile=null">Reset</div>
+            </div>
+        </div>
+
+        <div class="side" id="right_side">
+            <div class="section1">
+                <div class="select_size">
+                    <select name="pin_size" id="pin_size" (change)="selectedSize($event)">
+                        <option value="" disabled selected>Select</option>
+                        <option value="small">small</option>
+                        <option value="medium">medium</option>
+                        <option value="large">large</option>
+                    </select>
+                    <div class="save_pin" (click)="newPin()">Save</div>
+                </div>
+            </div>
+    
+            <div class="section2">
+                <input placeholder="Add your title" type="text" class="new_pin_input" id="pin_title" [(ngModel)]="title">
+                <input placeholder="Tell everyone what your Pin is about" type="text" class="new_pin_input" id="pin_description" [(ngModel)]="description">
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

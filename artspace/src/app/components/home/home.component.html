@@ -1,0 +1,65 @@
+<header>
+  <h2>Ideas in your feed are based on these topics</h2>
+  <div class="head_card card1">
+    <p>Modern house design</p>
+  </div>
+  <div class="head_card card2">
+    <p>Men's health fitness</p>
+  </div>
+  <div class="head_card card3">
+    <p>Anime</p>
+  </div>
+  <div class="head_card card4">
+    <p>Astronomy</p>
+  </div>
+  <div class="head_card card5">
+    <p>Bussiness</p>
+  </div>
+  <div class="head_card card_add" routerLink="/categories/"></div>
+</header>
+
+<div class="pin_container small">
+  <div class="card {{ pin.size }}" *ngFor="let pin of list; let index = index">
+    <div class="pin_title"></div>
+
+    <div class="pin_modal">
+      <div class="modal_head">
+        <div class="save_card">Save</div>
+      </div>
+
+      <div class="modal_foot">
+        <div class="destination">
+          <div class="pin_mock_icon_container">
+            <img
+              class="pin_mock_icon"
+              src="https://cdn.iconscout.com/icon/free/png-512/upper-right-arrow-1438213-1216174.png"
+              alt=""
+            />
+          </div>
+
+          <span>Eatery</span>
+        </div>
+
+        <div class="pin_mock_icon_container">
+          <img
+            class="pin_mock_icon"
+            src="https://icons-for-free.com/iconfiles/png/512/box+document+outline+share+top+upload+icon-1320195323221671611.png"
+            alt=""
+          />
+        </div>
+
+        <div class="pin_mock_icon_container">
+          <img
+            class="pin_mock_icon"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Simple_icon_ellipsis.svg/1280px-Simple_icon_ellipsis.svg.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="pin_image">
+      <img src="https://picsum.photos/200/{{ 300 + index }}" alt="pin_image" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<app-album-detail></app-album-detail>
+
+<div class="all-photos">
+    <div *ngFor="let photo of photos" class="photos" (click)="openModal(template, photo.id)">
+      <div class="photo">
+        <img src="{{photo.url}}">
+      </div>
+    </div>
+</div>
+
+
+<ng-template #template>
+  <div class="modal-bg">
+    <div class="modal">
+      <img src="{{thisPhoto.url}}">
+      <p>{{thisPhoto.description}}</p>
+      <button type="button" class="close" aria-label="close" (click)="modalRef.hide()"><span aria-hidden="true">x</span></button>
+    </div>
+  </div>
+</ng-template>

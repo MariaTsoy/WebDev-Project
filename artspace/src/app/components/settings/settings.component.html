@@ -1,0 +1,28 @@
+<div class="settingContainer">
+    <div class="setting-form">
+        <label for="user.username">Username:</label>
+        <input type="text" [(ngModel)]="user.username">
+    </div>
+    <div class="setting-form">
+        <label>Password:</label>
+        <input class="dis" type="password" disabled="disabled" placeholder="CURRENTLY UNIMPLEMENTED">
+    </div>
+    <div class="setting-form">
+        <label for="user.email">Email:</label>
+        <input type="text" [(ngModel)]="user.email">
+    </div>
+    <div class="setting-form">
+        <label for="user.banner">Banner:</label>
+        <input type="text" [(ngModel)]="user.banner">
+    </div>
+    <div class="setting-form">
+        <label for="user.photo">Photo:</label>
+        <input type="text" [(ngModel)]="user.photo">
+    </div>
+    <div class="setting-form">
+        <label for="user.desc">Description:</label>
+        <input type="text" [(ngModel)]="user.desc">
+    </div>
+
+    <button class="save" (click)="save()">Save</button>
+</div>

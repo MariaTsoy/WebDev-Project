@@ -1,0 +1,8 @@
+<div class="category_container">
+    <h1 class="title">Categories</h1>
+    <div *ngIf="isLoading">Loading...</div>
+    <div class="category" *ngFor='let category of categories' [routerLink]="['/categories', category.id]">
+        <img src="{{category.photo}}" alt="">
+        <h3>{{category.name}}</h3>
+    </div>
+</div>
